@@ -1,14 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-    <!DOCTYPE html>
     <html lang="en">
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Xilombe Electronics</title>
+            <link rel="stylesheet" href="css/themes.css" />
+            <style>
+                
+/* Reset and base styles */
+* {box-sizing: border-box;margin: 0;padding: 0;}
+    
+body {
+    font-family: Arial, sans-serif; background-color: rgb(249, 249, 249);  color: rgb(51, 51, 51); line-height: 1.6;}
+   
+/* Header styling */
+header {
+    background-color: rgb(34, 32, 34); padding: 30px;display: flex;  justify-content: space-between;
+   
+    align-items: center; flex-wrap: wrap;}
+
+
+
+header img { height: 60px; max-width: 100%;} 
+
+
+
+nav ul { list-style-type: none; display: flex; gap: 20px; flex-wrap: wrap;}
+   
+
+
+
+nav a { text-decoration: none; color: rgb(6, 253, 18); font-weight: bold;  text-transform: uppercase;
+    padding: 10px 15px; transition: all 0.3s ease;}
+   
+
+
+    nav a:hover { background-color: rgb(4, 126, 247); border-radius: 15px; color: white;}
+   
+
+
+/* Content */
+h1, h2 { text-align: center; margin: 30px 0 10px;color: rgb(34, 34, 34);}
+   
+
+
+.container { display: flex;flex-wrap: wrap;justify-content: center;gap: 30px;padding: 20px;}
+    
+    
+   
+.item { flex-basis: 280px; background-color: white;    border: 1px solid rgb(221, 221, 221); border-radius: 12px; overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
+
+   
+
+.item:hover {transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,0,0,0.2);}
+    
+
+.item img { width: 100%;height: auto; display: block;}
+   
+
+
+.description {font-size: 16px; padding: 10px 15px 0; color: rgb(68, 68, 68);}
+   
+
+
+.price {  font-weight: bold; padding: 10px 15px 15px; color: rgb(26, 115, 232);}
+   
+
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    } 
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+        padding: 10px;
+        background-color: rgb(51, 51, 51);
+        border-radius: 8px;
+    }
+
+    .container {
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .item {
+        flex-basis: 90%;
+    }
+}
+
+
+          
+            </style>
         </head>
-        <body>
+        <body class="products-page">
             <header>
+                <img src="images/Logo.jpg" alt="Xilombe Electronics Logo" />
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -18,90 +110,81 @@
                         <li><a href="enquiry.html">Enquiry</a></li>
                     </ul>
                 </nav>
+               
             </header>
     
             <h1>Products</h1>
             
-            <h2>Essential Electronics</h2>
+            <h2 >Essential Electronics</h2>
             
-            <div>
-                <div>
+           <div class="container">
+            <div class="item">
                 <img src="images/smartphone-7423619_640.jpg" width="300" height="400" alt="Smartphone">
-                <p>Description: Latest model smartphone </p>
-                <p>Price: R9300</p>
-                </div>
-            <div>
-                <img src="images/iphones-7156593_640.jpg" width="300" height="400" alt="iPhones">
-                <p>Description: Iphone 12 Pro</p>
-                <p>Price: R6000</p>
-            </div>
-            <div>
-                <img src="images/laptop-1846277_640.jpg" width="300" height="400" alt="Laptop">
-                <p>Description: High performance laptop, 16 GB RAM, 512 ssd storage</p>
-                <p>Price: R11500</p>
-            </div>
-            <div>
-                <img src="images/laptop-2665794_640.jpg" width="300" height="400" alt="Laptop" >
-                <p>Description: Ultraportable laptop, 14 inch screen, 8GB RAM, 256 ssd storage</p>
-                <p>Price: R7200</p>
-            </div>
-            <div>
-                <img src="images/smart-watch-889639_640.jpg" width="300" height="400" alt="Smart Watch">
-                <p>Description: Stylish smart watch</p>
-                <p>Price:R800</p>
-            </div>
-            <div>
-                <img src="images/apple-3780515_640.jpg" width="300" height="400" alt="Apple Electronics">
-                <p>Description: Apple electronics</p>
-                <p>Price: R300</p>
-            </div>
-            </div>
-            <h2>Home appliances</h2>
-            <br>
-            <div>
-                <div>
-            <img src="images/washing-machine-5089939_640.jpg" width="300" height="400" alt="washing machine">
-            <p>Description: High quality washing machine</p>
-            <p>Price: R4000</p>
-                </div>
-                <div>
-            <img src="images/tv-627876_640.jpg" width="300" height="400" alt="TV">
-            <p>Description: 4K Smart TV with built-in apps</p>
-            <p>Price: R3500</p>
-
-        </div>
-        <div>
-            <img src="images/appliance-5144884_640.jpg" width="300" height="400" alt="Microwave">
-<p>Description: High-quality microwave </p>
-<p>Prices: R1200</p>
-        </div>
+                <div class="Description">Latest model smartphone</div>
+                <div class="price">R9300</div>
         
-        </div>
+            </div>
+<div class="item">
+    <img src="images/iphones-7156593_640.jpg" width="300" height="400" alt="Iphone">
+    <div  class="description">Iphone 12 Pro</div>
+    <div class="price">R6000</div>
+</div>
+<div class="item">
+    <img src="images/laptop-1846277_640.jpg" width="300" height="400" alt="Laptop">
+    <div class="description">High performance laptop, 16GB RAM, 512 ssd storage</div>
+    <div class="price">R11500</div>
+</div>
+<div class="item">
+    <img src="images/laptop-2665794_640.jpg" width="300" height="400" alt="Laptop">
+    <div class="description">Ultraportable laptop, 14 inch screen, 8GB RAM, 256 ssd storage</div>
+    <div class="price">R7200</div>
+    </div>
+    <div class="item">
+        <img src="images/smart-watch-889639_640.jpg" width="300" height="400" alt="Smart Watch">
+        <div class="description">Stylish smart watch</div>
+        <div class="price">R800</div>
+    </div>
+    <div class="item">
+        <img src="images/apple-3780515_640.jpg" width="300" height="400" alt="Apple Electronics">
+        <div class="description">Apple electronics</div>
+        <div class="price">R300</div>
+    </div>
+    <div class="item">
+        <img src="images/washing-machine-5089939_640.jpg" width="300" height="400" alt="washing machine">
+        <div class="description">High quality washing machine</div>
+        <div class="price">R4000</div>
+    </div>
+    <div class="item">
+        <img src="images/tv-627876_640.jpg" width="300" height="400" alt="TV">
+        <div class="description">4k Smart TV with built-in apps</div>
+        <div class="price">R3500</div>
+    </div>
+    <div class="item">
+        <img src="images/appliance-5144884_640.jpg" width="300" height="400" alt="Microwave">
+        <div class="description">High-quality microwave</div>
+        <div class="price">R1200</div>
+    </div>
         <h2>Accessories</h2>
         <br>
-        <div>
-            <div>
+       <div class="item">
         <img src="images/casings-5671111_640.jpg" width="300" height="400" alt="Phone cases">
-        <p>Description: High-quality phone cases</p>
-        <p>Prices: R150</p>
-        </div>
-        <div>
+        <div class="description">High-quality phone cases</div>
+        <div class="price">R150</div>
+       </div>
+       <div class="item">
         <img src="images/psp-2202617_640.jpg" width="300" height="400" alt="Gaming console">
-<p>Description: PSP gaming cosole</p>
-<p>Price: R400</p>
-        </div>
-        <div>
+        <div class="description">PSP gaming console</div>
+        <div class="price">R400</div>
+       </div>
+       <div class="item">
         <img src="images/two-pin-3509490_640.jpg" width="300" height="400" alt="Power adaptor">
-<p>Description: Two-pin power adaptor</p>
-<p>Price: R80</p>
-        </div>
-        <div>
-        <img src="images/video-game-console-2202592_640.jpg " width="300" height="400" alt="Video game console">
-        <p>Description: Modern video game console</p>
-        <p>Price: R800</p>
-        </div>
-
-        </div> 
+        <div class="description">Two-pin power adaptor</div>
+        <div class="price">R80</div>
+       </div>
+       <div class="item">
+        <img src="images/video-game-console-2202592_640.jpg" width="300" height="400" alt="Video game console">
+        <div class="description">Modern video game console</div>
+        <div class="price">R800</div>
         </body>
 </html>
     
