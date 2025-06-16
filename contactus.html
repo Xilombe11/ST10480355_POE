@@ -1,73 +1,609 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Xilombe Electronics</title>
-            <link rel="stylesheet" href="css/themes.css" />
-            <style>
-               
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Xilombe Electronics for inquiries, support, or feedback. We're located in Centurion Mall, Pretoria and available via phone, email, or our contact form.">
+    <meta name="keywords" content="Xilombe Electronics, contact, electronics store, Centurion, Pretoria, South Africa, customer support">
+    <title>Contact Us | Xilombe Electronics - Premium Electronics Retailer</title>
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <style>
+        :root {
+            --primary-color: #047ef7;
+            --secondary-color: #10b110;
+            --dark-color: #2c2c2c;
+            --light-color: #f8f9fa;
+            --accent-color: #ff6b6b;
+            --text-color: #444;
+            --text-light: #6c757d;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
 
-    
-body{font-family: Arial, sans-serif;background-color: rgb(248, 249, 250);color: rgb(51, 51, 51);margin: 0;padding: 0;}
-h1 {text-align: center;margin: 40px 0 20px;color: rgb(44, 62, 80);}
-section {max-width: 800px;margin: 0 auto;padding: 30px;border-radius: 10px;box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);}
-section p {font-size: 1.1em;line-height: 1.6;}
-.phone-number{color: rgb(0, 123, 255);font-weight: bold;font-size: 18px;letter-spacing: 1px;}
-.email{color: rgba(7, 195, 7, 0.736);font-weight: bold;font-size: 18px;letter-spacing: 1px;}
-address{margin-top: 20px;line-height: 1.6;}
-h2 {color: rgb(44, 62, 80);margin-top: 30px;}
-a {color: rgb(0, 123, 255);text-decoration: none;font-weight: bold;}
-a hover {text-decoration: underline;}
-@media (max-width:768px) {header{flex-direction: column;align-items: center;}
-    nav ul {flex-direction: column;gap: 10px;background-color: rgb(52, 73, 94);padding: 10px;border-radius: 8px;margin-top: 10px;
-    } header img {margin-top: 10px;}.faq-section{margin: 20px;padding: 20px;}}
-     
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
 
-      
-       
-            </style>
-        </head>
-        <body>
-            <header>
-                <img src="images/Logo.jpg" alt="Xilombe Electronics Logo" />
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutus.html">About Us</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
-                        <li><a href="enquiry.html">Enquiry</a></li>
-                    </ul>
-                </nav>
-            </header>
-    
-            <h1>Contact us</h1>
+        header {
+            background-color: var(--dark-color);
+            padding: 1rem 2rem;
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img {
+            height: 60px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a:focus {
+            background-color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .main-content {
+            margin-top: 100px;
+            padding: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0 0 2rem;
+            color: var(--dark-color);
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h1::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 1rem auto;
+        }
+
+        h2 {
+            color: var(--dark-color);
+            margin-top: 2rem;
+            font-size: 1.8rem;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info, .contact-form-section, .map-section {
+            background-color: var(--white);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-methods {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            min-width: 40px;
+            text-align: center;
+            padding-top: 0.3rem;
+        }
+
+        .contact-details h3 {
+            margin: 0 0 0.5rem;
+            color: var(--dark-color);
+        }
+
+        .phone-number, .email {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .phone-number {
+            color: var(--primary-color);
+        }
+
+        .email {
+            color: var(--secondary-color);
+        }
+
+        address {
+            font-style: normal;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-link:hover, .social-link:focus {
+            background-color: var(--dark-color);
+            transform: translateY(-3px);
+        }
+
+        /* Contact Form Styles */
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(4, 126, 247, 0.2);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+        }
+
+        .submit-btn:hover, .submit-btn:focus {
+            background-color: var(--dark-color);
+        }
+
+        .form-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+
+        .success {
+            background-color: rgba(16, 177, 16, 0.2);
+            color: var(--secondary-color);
+            display: block;
+        }
+
+        .error {
+            background-color: rgba(255, 107, 107, 0.2);
+            color: var(--accent-color);
+            display: block;
+        }
+
+        /* Map Styles */
+        #storeMap {
+            height: 400px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .map-info {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: rgba(4, 126, 247, 0.1);
+            border-radius: 4px;
+        }
+
+        /* Business Hours */
+        .business-hours {
+            margin-top: 2rem;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .hours-table tr:nth-child(even) {
+            background-color: rgba(248, 249, 250, 0.5);
+        }
+
+        .hours-table th, .hours-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-table th {
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .map-section {
+                grid-column: span 2;
+            }
+
+            .contact-form {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .form-group.message-group {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 576px) {
+            header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                margin-top: 1rem;
+            }
+
+            .main-content {
+                margin-top: 140px;
+            }
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        [aria-hidden="true"] {
+            display: none;
+        }
+
+        :focus {
+            outline: 3px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="images/Logo.jpg" alt="Xilombe Electronics Logo" width="180" height="60">
+        </a>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contactus.html" aria-current="page">Contact Us</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h1>Contact Us</h1>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h3>Phone</h3>
+                            <p class="phone-number">083 489 0185</p>
+                            <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">✉</div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p class="email">info@xilombe-electronics.co.za</p>
+                            <p>Response time: Within 24 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h3>Store Location</h3>
+                            <address>
+                                123 Main Street, Shop 12<br>
+                                Centurion Mall<br>
+                                Centurion, Pretoria<br>
+                                0046
+                            </address>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="business-hours">
+                    <h2>Business Hours</h2>
+                    <table class="hours-table">
+                        <tr>
+                            <th>Monday - Friday</th>
+                            <td>8:00 AM - 5:00 PM</td>
+                        </tr>
+                        <tr>
+                            <th>Saturday</th>
+                            <td>9:00 AM - 2:00 PM</td>
+                        </tr>
+                        <tr>
+                            <th>Sunday</th>
+                            <td>Closed</td>
+                        </tr>
+                        <tr>
+                            <th>Public Holidays</th>
+                            <td>10:00 AM - 1:00 PM</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="social-media">
+                    <h2>Connect With Us</h2>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/xilombeelectronics" class="social-link" aria-label="Facebook">
+                            <span aria-hidden="true">f</span>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com/xilombeelectronics/" class="social-link" aria-label="Instagram">
+                            <span aria-hidden="true">📷</span>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                        <a href="https://twitter.com/xilombeelectronics" class="social-link" aria-label="Twitter">
+                            <span aria-hidden="true">𝕏</span>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                        <a href="https://wa.me/27834890185" class="social-link" aria-label="WhatsApp">
+                            <span aria-hidden="true">💬</span>
+                            <span class="sr-only">WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
             
-
-        <section>
-            <p>Call us at: <span class="phone-number">0834890185</span></p>
-           <p>Email us at: <span class="email">info@xilombe-electronics.co.za</span></p>
-            <address>
-            <h2>Physical Store Location:</h2>
-            <p>123 Main Street, Shop 12
-            Centurion Mall,
-            Centurion, Pretoria
-            0046</p>
-        </address>
-
-            <h2>Social Media Links:</h2>
-            <p><a href="https://www.facebook.com/xilombeelectronics" target="_blank" class="link">Follow us on Facebook</a></p>
-            <p><a href="https://www.instagram.com/xilombeelectronics/" target="_blank">Follow us on Instagram</a></p>
-
+            <div class="contact-form-section">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="fullName">Full Name *</label>
+                        <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Your name" required>
+                        <div class="error-message" id="nameError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Your email" required>
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="Your phone number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" class="form-control" required>
+                            <option value="">Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="product">Product Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <div class="error-message" id="subjectError"></div>
+                    </div>
+                    
+                    <div class="form-group message-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Your message..." required></textarea>
+                        <div class="error-message" id="messageError"></div>
+                    </div>
+                    
+                    <div class="form-group message-group">
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </div>
+                    
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
             
-        </section>
+            <div class="map-section">
+                <h2>Find Us on the Map</h2>
+                <div id="storeMap"></div>
+                <div class="map-info">
+                    <p><strong>Parking:</strong> Free parking available in Centurion Mall parking lot</p>
+                    <p><strong>Public Transport:</strong> Accessible via Gautrain bus route 12 (Centurion Mall stop)</p>
+                    <p><strong>Landmarks:</strong> Next to Pick n Pay, opposite the food court</p>
+                </div>
+            </div>
+        </div>
+    </main>
 
-    
-        
-    </body>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        document.addEventListener('DOMContentLoaded', function() {
+            // Map initialization
+            const map = L.map('storeMap').setView([-25.8600, 28.1900], 16);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            
+            // Add a marker
+            const marker = L.marker([-25.8600, 28.1900]).addTo(map)
+                .bindPopup("<b>Xilombe Electronics</b><br>Centurion Mall, Shop 12");
+            
+            // Form validation and submission
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Reset previous messages
+                formMessage.className = 'form-message';
+                formMessage.textContent = '';
+                
+                // Validate form
+                let isValid = true;
+                const name = document.getElementById('fullName');
+                const email = document.getElementById('email');
+                const subject = document.getElementById('subject');
+                const message = document.getElementById('message');
+                
+                // Name validation
+                if (name.value.trim() === '') {
+                    document.getElementById('nameError').textContent = 'Please enter your name';
+                    isValid = false;
+                } else {
+                    document.getElementById('nameError').textContent = '';
+                }
+                
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email.value)) {
+                    document.getElementById('emailError').textContent = 'Please enter a valid email address';
+                    isValid = false;
+                } else {
+                    document.getElementById('emailError').textContent = '';
+                }
+                
+                // Subject validation
+                if (subject.value === '') {
+                    document.getElementById('subjectError').textContent = 'Please select a subject';
+                    isValid = false;
+                } else {
+                    document.getElementById('subjectError').textContent = '';
+                }
+                
+                // Message validation
+                if (message.value.trim() === '') {
+                    document.getElementById('messageError').textContent = 'Please enter your message';
+                    isValid = false;
+                } else {
+                    document.getElementById('messageError').textContent = '';
+                }
+                
+                if (isValid) {
+                    // Simulate form submission (in a real scenario, this would be an AJAX call)
+                    setTimeout(() => {
+                        formMessage.className = 'form-message success';
+                        formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+                        contactForm.reset();
+                        
+                        // Scroll to the message
+                        formMessage.scrollIntoView({ behavior: 'smooth' });
+                    }, 1000);
+                } else {
+                    formMessage.className = 'form-message error';
+                    formMessage.textContent = 'Please fix the errors in the form and try again.';
+                }
+            });
+            
+            // Accessibility: Add keyboard navigation to form
+            contactForm.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA' && e.target.tagName !== 'BUTTON') {
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
+</body>
 </html>
-

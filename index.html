@@ -1,102 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xilombe Electronics</title>
-    <link rel="stylesheet" href="css/themes.css" />
-    <style>
-       
-        
-        
-       body { font-family: Arial, sans-serif;background-color: rgb(4, 126, 247);line-height: 1.6;}
-
-
-       
-
-        h1 { text-align: center;margin-top: 60px; font-size: 2.5em; color: rgb(34, 34, 34);}
-           
-
-        .content {
-            max-width: 900px; margin: 40px auto; padding: 20px;background: rgb(255, 255, 255); border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
-           
-        
-        
-
-        .promo {
-            text-align: center; margin-top: 30px; }
-            
-       
-
-        .promo h3 { margin: 10px 0; color: red;}
-          
-        
-
-        .promo img {max-width: 100%; height: auto; border-radius: 10px; }
-            
-
-        .cta-button {
-            display: inline-block;margin-top: 20px; padding: 12px 25px; background-color: rgb(4, 126, 247);color: white; font-weight: bold;
-           
-             text-transform: uppercase;border: none; border-radius: 5px;text-decoration: none;transition: background-color 0.3s;}
-           
-          
-        
-
-        
-            .cta-button:hover {  background-color: darkblue; }
-        
-
-/* Header styling */
-header {
-    background-color: rgb(34, 32, 34); padding: 30px; display: flex; justify-content: space-between;  align-items: center; flex-wrap: wrap;}
-   
-
-
-    header img { height: 60px;max-width: 100%;}
-   
-    
-/* Navigation styling */
-nav ul { list-style-type: none; display: flex;gap: 20px;flex-wrap: wrap;}
-    
-   
-
-
-
-nav a { text-decoration: none;color: rgb(6, 253, 18);  font-weight: bold; text-transform: uppercase;padding: 10px 15px;transition: all 0.3s ease}
-   
-
-
-    
-    nav a:hover {   background-color: rgb(4, 126, 247); border-radius: 15px;}
-  
-
-
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items:center;
-    }
-
-    nav ul { flex-direction: column; gap: 10px; margin-top: 15px; padding: 10px; background-color: rgb(51, 51, 51); border-radius: 8px;
-     
-    }
-}
-
-
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xilombe Electronics | Quality Tech Solutions in South Africa</title>
+    <meta name="description" content="Xilombe Electronics - Your trusted source for quality electronics, computers, laptops, and smartphones in South Africa. Best prices with expert advice.">
+    <meta name="keywords" content="electronics, computers, laptops, smartphones, South Africa, tech store, Xilombe Electronics">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-    <header>
-       <img src="images/Logo.jpg" alt="Xilombe Electronics Logo" />
-       
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
     
-        
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
+    <header id="mainHeader">
+        <div class="logo-container">
+            <img src="images/Logo.jpg" alt="Xilombe Electronics Logo - Your Trusted Tech Partner" width="200" height="60">
+        </div>
+        <nav aria-label="Main navigation">
+            <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="primaryNav">
+                <span class="hamburger"></span>
+                <span class="sr-only">Menu</span>
+            </button>
+            <ul id="primaryNav">
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="contactus.html">Contact Us</a></li>
@@ -105,23 +32,252 @@ nav a { text-decoration: none;color: rgb(6, 253, 18);  font-weight: bold; text-t
         </nav>
     </header>
 
-    <h1 >Welcome to Xilombe Electronics</h1>
+    <main id="mainContent">
+        <section class="hero-section" aria-labelledby="heroHeading">
+            <div class="hero-content">
+                <h1 id="heroHeading">Premium Electronics at Unbeatable Prices</h1>
+                <p class="hero-subtitle">Your trusted tech partner since 2003</p>
+                <div class="hero-buttons">
+                    <a href="#featuredProducts" class="cta-button primary">Shop Now</a>
+                    <a href="#specialOffers" class="cta-button secondary">Special Offers</a>
+                </div>
+            </div>
+        </section>
 
-    <div class="content">
-        <p>
-            Xilombe Electronics has been a trusted name in affordable, high-quality electronics since the early 2000s.
-            Our store is known for great prices, a wide selection of products, and exceptional customer service.
-            Over the years, we've expanded our offerings to include the latest tech, home appliances, and accessories—
-            all while staying committed to serving our community with excellence.
-        </p>
+        <section class="features-section" aria-labelledby="featuresHeading">
+            <h2 id="featuresHeading" class="section-heading">Why Choose Xilombe Electronics?</h2>
+            <div class="features-grid">
+                <div class="feature-card" tabindex="0">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>Price Match Guarantee</h3>
+                    <p>We'll match any competitor's price on identical products, ensuring you always get the best deal.</p>
+                </div>
+                <div class="feature-card" tabindex="0">
+                    <i class="fas fa-users feature-icon"></i>
+                    <h3>Expert Staff</h3>
+                    <p>Our knowledgeable team provides personalized advice to help you find the perfect tech solution.</p>
+                </div>
+                <div class="feature-card" tabindex="0">
+                    <i class="fas fa-certificate feature-icon"></i>
+                    <h3>Extended Warranties</h3>
+                    <p>Enjoy peace of mind with our comprehensive warranty options beyond manufacturer coverage.</p>
+                </div>
+                <div class="feature-card" tabindex="0">
+                    <i class="fas fa-hand-holding-heart feature-icon"></i>
+                    <h3>Community Focus</h3>
+                    <p>We reinvest in local communities through tech education programs and charitable initiatives.</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="promo">
-            <h3>Don't Miss Out!</h3>
-            <h3>40% OFF Select Items</h3>
-            <img src="images/laptop-1846277_640.jpg" alt="Laptop Promotion" />
-            <a class="cta-button" href="products.html">Shop Now</a>
+        <section id="featuredProducts" class="products-section" aria-labelledby="productsHeading">
+            <h2 id="productsHeading" class="section-heading">Featured Products</h2>
+            <div class="products-grid">
+                <article class="product-card" tabindex="0">
+                    <div class="product-image">
+                        <img src="images/laptop-1846277_640.jpg" alt="Premium Laptop with high-resolution display" loading="lazy">
+                        <span class="product-badge">BEST SELLER</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>X-Tech Pro Laptop</h3>
+                        <p class="product-description">16GB RAM, 1TB SSD, Intel i7 processor, 15.6" 4K display</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="rating-text">4.5 (128 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R15,999</span>
+                            <span class="original-price">R18,499</span>
+                            <span class="discount">14% OFF</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add X-Tech Pro Laptop to cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </article>
+                
+                <article class="product-card" tabindex="0">
+                    <div class="product-image">
+                        <img src="images/smartphone.jpg" alt="Latest smartphone with triple camera system" loading="lazy">
+                        <span class="product-badge">NEW</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Galaxy Ultra S25</h3>
+                        <p class="product-description">6.8" AMOLED, 256GB storage, 108MP camera, 5000mAh battery</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="rating-text">4.0 (76 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R12,499</span>
+                            <span class="original-price">R14,999</span>
+                            <span class="discount">17% OFF</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add Galaxy Ultra S25 to cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </article>
+                
+                <article class="product-card" tabindex="0">
+                    <div class="product-image">
+                        <img src="images/headphones.jpg" alt="Premium wireless noise-cancelling headphones" loading="lazy">
+                        <span class="product-badge">LIMITED STOCK</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>SoundMax Pro Wireless</h3>
+                        <p class="product-description">Active noise cancellation, 30hr battery, premium bass</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="rating-text">4.9 (215 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R2,999</span>
+                            <span class="original-price">R3,799</span>
+                            <span class="discount">21% OFF</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add SoundMax Pro Wireless to cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="section-cta">
+                <a href="products.html" class="cta-button primary">View All Products</a>
+            </div>
+        </section>
+
+        <section id="specialOffers" class="offers-section" aria-labelledby="offersHeading">
+            <h2 id="offersHeading" class="section-heading">Special Offers</h2>
+            <div class="offer-banner">
+                <div class="offer-content">
+                    <span class="offer-tag">LIMITED TIME</span>
+                    <h3>Summer Tech Sale</h3>
+                    <p>Up to 40% off select items. Offer valid until 31 January 2026.</p>
+                    <div class="countdown-timer">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="minutes">00</span>
+                            <span class="countdown-label">Minutes</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="seconds">00</span>
+                            <span class="countdown-label">Seconds</span>
+                        </div>
+                    </div>
+                    <a href="products.html" class="cta-button secondary">Shop the Sale</a>
+                </div>
+                <div class="offer-image">
+                    <img src="images/sale-banner.jpg" alt="Summer Tech Sale - Up to 40% off" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section" aria-labelledby="testimonialsHeading">
+            <h2 id="testimonialsHeading" class="section-heading">What Our Customers Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <blockquote>
+                        <p>"I've been shopping at Xilombe Electronics for years. Their prices are unbeatable and their after-sales service is exceptional. When I had an issue with my laptop, they resolved it immediately with no hassle."</p>
+                        <footer>- Michael T, Loyal Customer</footer>
+                    </blockquote>
+                </div>
+                <div class="testimonial">
+                    <blockquote>
+                        <p>"The staff at Xilombe are incredibly knowledgeable. They helped me find the perfect computer for my graphic design work within my budget. I couldn't be happier with my purchase!"</p>
+                        <footer>- Sarah K, Graphic Designer</footer>
+                    </blockquote>
+                </div>
+                <div class="testimonial">
+                    <blockquote>
+                        <p>"Best electronics store in Johannesburg! They price-matched an online deal and saved me R2000 on my new TV. Will definitely be coming back for all my tech needs."</p>
+                        <footer>- John D, Satisfied Customer</footer>
+                    </blockquote>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-prev" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots"></div>
+                    <button class="slider-next" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-section" aria-labelledby="newsletterHeading">
+            <div class="newsletter-content">
+                <h2 id="newsletterHeading">Stay Updated</h2>
+                <p>Subscribe to our newsletter for exclusive deals, tech tips, and new product announcements.</p>
+                <form class="newsletter-form" aria-label="Newsletter subscription form">
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                        <button type="submit" class="cta-button primary">Subscribe</button>
+                    </div>
+                    <div class="form-agreement">
+                        <input type="checkbox" id="agree" name="agree" required>
+                        <label for="agree">I agree to receive marketing communications from Xilombe Electronics</label>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <address>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Johannesburg, SA</p>
+                    <p><i class="fas fa-phone"></i> +27 11 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@xilombe.co.za</p>
+                </address>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
         </div>
-    </div>
-
+        <div class="footer-bottom">
+            <p>&copy; 2025 Xilombe Electronics. All Rights Reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </div>
+    </footer>
+  
+   
+    <script src="javascript/script.js" defer></script>
 </body>
 </html>

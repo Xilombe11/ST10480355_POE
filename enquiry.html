@@ -1,93 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xilombe Electronics</title>
-    <link rel="stylesheet" href="css/themes.css" />
-    <style>
-
-        
-        .content p {font-size: 1.1em;line-height: 1.6; text-align: center;}
-           
-       
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column; align-items: center;
-              
-            }
-
-            nav ul {
-                flex-direction: column; gap: 10px; margin-top: 15px;
-                
-                padding: 10px; background-color: rgb(51, 51, 51); border-radius: 8px;
-               
-            }
-        }
-        body {font-family: arial,sans-serif;background-color: rgb(244, 244, 244);color: rgb(51, 51, 51);margin: 0;padding: 0;}
-
-      
-        h1,h2 {text-align: center;margin-top: 30px;color: rgb(44, 62, 80)}
-
-        .faq-section {max-width: 800px;margin: 30px auto;background: rgb(255, 255, 255);padding: 30px;border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);}
-
-        .faq-question {margin-bottom: 20px;}
-
-        .faq-question p{font-size: 1.2em;color: rgb(44, 62, 80)}
-
-        .faq-section p{font-size: 1em;line-height: 1.6;color: rgb(85, 85, 85)}
-
-        @media (max-width:768px) {header{flex-direction: column;align-items: center;}
-    nav ul {flex-direction: column;gap: 10px;background-color:rgb(44, 62, 80);padding: 10px;border-radius: 8px;margin-top: 10px;
-    } header img {margin-top: 10px;}.faq-section{margin: 20px;padding: 20px;}}
-     
-     
-</style>
-   </head>
-   
-        <body>
-            <header>
-               
-              <img src="images/Logo.jpg" alt="Xilombe Electronics Logo" />
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutus.html">About Us</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
-                        <li><a href="enquiry.html">Enquiry</a></li>
-                    </ul>
-                </nav>
-            </header>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry Form | Xilombe Electronics | Quality Tech Solutions</title>
+    <meta name="description" content="Have questions? Contact Xilombe Electronics through our enquiry form. We're here to help with all your tech needs in South Africa.">
+    <meta name="keywords" content="electronics enquiry, tech support, product questions, Xilombe support, South Africa electronics">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/enquiry.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
     
-            <h1 >Enquiry</h1>
-            
-<h2 >Frequently Asked Questions</h2>
-<div class="faq-section">
-  <div class="faq-question">
-    <h3 >Q: What is the warranty period for your products?</h3>
-    <p >A: Our products have a warranty period of 1-2 years, depending on the product type.</p>
-  </div>
-  <div class="faq-question">
-    <h3 >Q: How do I track my order?</h3>
-    <p >A: You can track your order by logging into your account and viewing the order status.</p>
-  </div>
-  <div class="faq-question">
-    <h3 >Q: Can I return or exchange a product?</h3>
-    <p >A: Yes, you can return or exchange a product within 30 days of purchase. Please see our return policy for details.</p>
-  </div>
-  <div class="faq-question">
-    <h3 >Q: How do I contact technical support?</h3>
-    <p >A: You can contact our technical support team by submitting a technical support enquiry form on our website or by calling our support hotline.</p>
-  </div>
-</div>
-<h2 >Support line: 0834890185</h2>
-        </body>
-    </html>
+    <header id="mainHeader">
+        <div class="logo-container">
+            <img src="images/Logo.jpg" alt="Xilombe Electronics Logo - Your Trusted Tech Partner" width="200" height="60">
+        </div>
+        <nav aria-label="Main navigation">
+            <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="primaryNav">
+                <span class="hamburger"></span>
+                <span class="sr-only">Menu</span>
+            </button>
+            <ul id="primaryNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main id="mainContent">
+        <section class="hero-section" aria-labelledby="enquiryHeroHeading">
+            <div class="hero-content">
+                <h1 id="enquiryHeroHeading">How Can We Help You?</h1>
+                <p class="hero-subtitle">Our team is ready to answer your questions about products, services, or technical support</p>
+            </div>
+        </section>
 
+        <section class="enquiry-section" aria-labelledby="enquiryFormHeading">
+            <div class="enquiry-container">
+                <div class="enquiry-info">
+                    <h2 id="enquiryFormHeading">Frequently Asked Questions</h2>
+                    <div class="faq-accordion">
+                        <div class="accordion-item" tabindex="0">
+                            <button class="accordion-button" aria-expanded="false" aria-controls="faq1">
+                                What are your business hours?
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content" id="faq1">
+                                <p>Our stores are open Monday to Friday from 9:00 AM to 6:00 PM, and Saturdays from 9:00 AM to 2:00 PM. We're closed on Sundays and public holidays.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" tabindex="0">
+                            <button class="accordion-button" aria-expanded="false" aria-controls="faq2">
+                                Do you offer international shipping?
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content" id="faq2">
+                                <p>Currently, we only ship within South Africa. We're working on expanding our shipping options in the near future.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" tabindex="0">
+                            <button class="accordion-button" aria-expanded="false" aria-controls="faq3">
+                                What is your return policy?
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content" id="faq3">
+                                <p>We offer a 14-day return policy for most items. Products must be in original condition with all packaging and accessories. Some items like software and personal care products may have different return policies.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" tabindex="0">
+                            <button class="accordion-button" aria-expanded="false" aria-controls="faq4">
+                                How can I track my order?
+                                <i class="fas fa-chevron-down accordion-icon"></i>
+                            </button>
+                            <div class="accordion-content" id="faq4">
+                                <p>Once your order ships, you'll receive a tracking number via email. You can use this number on our website's order tracking page or the courier's website to follow your package.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-card">
+                        <h3>Prefer to call us?</h3>
+                        <div class="contact-method">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <p class="contact-label">Support Line</p>
+                                <p class="contact-detail">083 489 0185</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <p class="contact-label">Email</p>
+                                <p class="contact-detail">support@xilombe.co.za</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p class="contact-label">Visit Us</p>
+                                <p class="contact-detail">123 Tech Street, Johannesburg, SA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="enquiry-form-container">
+                    <form id="enquiryForm" class="enquiry-form" novalidate aria-labelledby="enquiryFormHeading">
+                        <div class="form-group">
+                            <label for="enquiryType">Enquiry Type *</label>
+                            <select id="enquiryType" name="enquiryType" required>
+                                <option value="" disabled selected>Select enquiry type</option>
+                                <option value="product">Product Information</option>
+                                <option value="order">Order Status</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="warranty">Warranty Claim</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="error-message" id="enquiryTypeError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="083 123 4567">
+                            <div class="error-message" id="phoneError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" placeholder="Brief subject of your enquiry" required>
+                            <div class="error-message" id="subjectError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Please provide details of your enquiry..." required></textarea>
+                            <div class="error-message" id="messageError"></div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="subscribe" name="subscribe">
+                            <label for="subscribe">Subscribe to our newsletter for updates and special offers</label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="cta-button primary">
+                                <i class="fas fa-paper-plane"></i> Submit Enquiry
+                            </button>
+                            <button type="reset" class="cta-button secondary">
+                                <i class="fas fa-redo"></i> Reset Form
+                            </button>
+                        </div>
+                        
+                        <div id="formMessage" class="form-message" role="alert" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
-            
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <address>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Johannesburg, SA</p>
+                    <p><i class="fas fa-phone"></i> +27 11 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@xilombe.co.za</p>
+                </address>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Xilombe Electronics. All Rights Reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+   
+    <script src="javascript/script.js" defer></script>
+</body>
+</html>

@@ -1,190 +1,538 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Xilombe Electronics</title>
-            <link rel="stylesheet" href="css/themes.css" />
-            <style>
-                
-/* Reset and base styles */
-* {box-sizing: border-box;margin: 0;padding: 0;}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Xilombe Electronics | Quality Tech Solutions in South Africa</title>
+    <meta name="description" content="Browse our wide selection of electronics, computers, smartphones, and accessories at Xilombe Electronics. Best prices with expert advice in South Africa.">
+    <meta name="keywords" content="electronics, computers, laptops, smartphones, South Africa, tech store, Xilombe Electronics, gadgets, accessories">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="products-page">
+    <a href="#mainContent" class="skip-link">Skip to main content</a>
     
-body {
-    font-family: Arial, sans-serif; background-color: rgb(249, 249, 249);  color: rgb(51, 51, 51); line-height: 1.6;}
-   
-/* Header styling */
-header {
-    background-color: rgb(34, 32, 34); padding: 30px;display: flex;  justify-content: space-between;
-   
-    align-items: center; flex-wrap: wrap;}
+    <header id="mainHeader">
+        <div class="logo-container">
+            <img src="images/Logo.jpg" alt="Xilombe Electronics Logo - Your Trusted Tech Partner" width="200" height="60">
+        </div>
+        <nav aria-label="Main navigation">
+            <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="primaryNav">
+                <span class="hamburger"></span>
+                <span class="sr-only">Menu</span>
+            </button>
+            <ul id="primaryNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="products.html" aria-current="page">Products</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+            </ul>
+        </nav>
+    </header>
 
-
-
-header img { height: 60px; max-width: 100%;} 
-
-
-
-nav ul { list-style-type: none; display: flex; gap: 20px; flex-wrap: wrap;}
-   
-
-
-
-nav a { text-decoration: none; color: rgb(6, 253, 18); font-weight: bold;  text-transform: uppercase;
-    padding: 10px 15px; transition: all 0.3s ease;}
-   
-
-
-    nav a:hover { background-color: rgb(4, 126, 247); border-radius: 15px; color: white;}
-   
-
-
-/* Content */
-h1, h2 { text-align: center; margin: 30px 0 10px;color: rgb(34, 34, 34);}
-   
-
-
-.container { display: flex;flex-wrap: wrap;justify-content: center;gap: 30px;padding: 20px;}
-    
-    
-   
-.item { flex-basis: 280px; background-color: white;    border: 1px solid rgb(221, 221, 221); border-radius: 12px; overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.1);}
-
-   
-
-.item:hover {transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,0,0,0.2);}
-    
-
-.item img { width: 100%;height: auto; display: block;}
-   
-
-
-.description {font-size: 16px; padding: 10px 15px 0; color: rgb(68, 68, 68);}
-   
-
-
-.price {  font-weight: bold; padding: 10px 15px 15px; color: rgb(26, 115, 232);}
-   
-
-
-/* Responsive layout */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    } 
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 15px;
-        padding: 10px;
-        background-color: rgb(51, 51, 51);
-        border-radius: 8px;
-    }
-
-    .container {
-        padding: 10px;
-        gap: 20px;
-    }
-
-    .item {
-        flex-basis: 90%;
-    }
-}
-
-
-          
-            </style>
-        </head>
-        <body class="products-page">
-            <header>
-                <img src="images/Logo.jpg" alt="Xilombe Electronics Logo" />
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutus.html">About Us</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
-                        <li><a href="enquiry.html">Enquiry</a></li>
-                    </ul>
-                </nav>
-               
-            </header>
-    
-            <h1>Products</h1>
-            
-            <h2 >Essential Electronics</h2>
-            
-           <div class="container">
-            <div class="item">
-                <img src="images/smartphone-7423619_640.jpg" width="300" height="400" alt="Smartphone">
-                <div class="Description">Latest model smartphone</div>
-                <div class="price">R9300</div>
-        
+    <main id="mainContent">
+        <section class="hero-section" aria-labelledby="productsHeroHeading">
+            <div class="hero-content">
+                <h1 id="productsHeroHeading">Our Premium Electronics Collection</h1>
+                <p class="hero-subtitle">Quality tech products at unbeatable prices</p>
             </div>
-<div class="item">
-    <img src="images/iphones-7156593_640.jpg" width="300" height="400" alt="Iphone">
-    <div  class="description">Iphone 12 Pro</div>
-    <div class="price">R6000</div>
-</div>
-<div class="item">
-    <img src="images/laptop-1846277_640.jpg" width="300" height="400" alt="Laptop">
-    <div class="description">High performance laptop, 16GB RAM, 512 ssd storage</div>
-    <div class="price">R11500</div>
-</div>
-<div class="item">
-    <img src="images/laptop-2665794_640.jpg" width="300" height="400" alt="Laptop">
-    <div class="description">Ultraportable laptop, 14 inch screen, 8GB RAM, 256 ssd storage</div>
-    <div class="price">R7200</div>
+        </section>
+
+        <section class="products-section" aria-labelledby="productsHeading">
+            <div class="section-header">
+                <h2 id="productsHeading">Essential Electronics</h2>
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Filter by Category:</label>
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="smartphones">Smartphones</option>
+                            <option value="laptops">Laptops</option>
+                            <option value="appliances">Appliances</option>
+                            <option value="accessories">Accessories</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="priceFilter">Sort by Price:</label>
+                        <select id="priceFilter" class="filter-select">
+                            <option value="default">Default</option>
+                            <option value="low-high">Low to High</option>
+                            <option value="high-low">High to Low</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <!-- Smartphone 1 -->
+                <article class="product-card" data-category="smartphones" data-price="9300" tabindex="0">
+                    <div class="product-image">
+                        <img src="images/smartphone-7423619_640.jpg" alt="Latest model smartphone with high-resolution display and multiple cameras" loading="lazy">
+                        <span class="product-badge">BEST SELLER</span>
+                        <button class="quick-view" aria-label="Quick view of smartphone">
+                            <i class="fas fa-eye"></i> Quick View
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>X-Tech Pro Smartphone</h3>
+                        <p class="product-description">6.7" AMOLED display, 128GB storage, 48MP triple camera system, 5000mAh battery</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="rating-text">4.5 (86 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R9,300</span>
+                            <span class="original-price">R10,999</span>
+                            <span class="discount">15% OFF</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add X-Tech Pro Smartphone to cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="wishlist-toggle" aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- iPhone -->
+                <article class="product-card" data-category="smartphones" data-price="6000" tabindex="0">
+                    <div class="product-image">
+                        <img src="images/iphones-7156593_640.jpg" alt="iPhone 12 Pro with sleek design and triple camera system" loading="lazy">
+                        <span class="product-badge">CLEARANCE</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>iPhone 12 Pro</h3>
+                        <p class="product-description">6.1" Super Retina XDR display, 128GB storage, A14 Bionic chip, Pro camera system</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="rating-text">4.0 (124 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R6,000</span>
+                            <span class="original-price">R8,499</span>
+                            <span class="discount">29% OFF</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add iPhone 12 Pro to cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="wishlist-toggle" aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- High Performance Laptop -->
+                <article class="product-card" data-category="laptops" data-price="11500" tabindex="0">
+                    <div class="product-image">
+                        <img src="images/laptop-1846277_640.jpg" alt="High performance laptop with sleek design" loading="lazy">
+                        <span class="product-badge">NEW</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>X-Tech Pro Laptop</h3>
+                        <p class="product-description">15.6" Full HD display, Intel Core i7, 16GB RAM, 512GB SSD, NVIDIA graphics</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="rating-text">4.9 (215 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R11,500</span>
+                            <span class="original-price">R13,999</span>
+                            <span class="discount">18% OFF</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add X-Tech Pro Laptop to cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="wishlist-toggle" aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Ultraportable Laptop -->
+                <article class="product-card" data-category="laptops" data-price="7200" tabindex="0">
+                    <div class="product-image">
+                        <img src="images/laptop-2665794_640.jpg" alt="Ultraportable laptop with thin design" loading="lazy">
+                        <span class="product-badge">LIGHTWEIGHT</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>X-Tech Ultra Laptop</h3>
+                        <p class="product-description">14" Full HD display, Intel Core i5, 8GB RAM, 256GB SSD, 1.2kg weight</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="rating-text">4.6 (178 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R7,200</span>
+                            <span class="original-price">R8,999</span>
+                            <span class="discount">20% OFF</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add X-Tech Ultra Laptop to cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="wishlist-toggle" aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Smart Watch -->
+                <article class="product-card" data-category="accessories" data-price="800" tabindex="0">
+                    <div class="product-image">
+                        <img src="images/smart-watch-889639_640.jpg" alt="Stylish smart watch with fitness tracking" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>X-Tech Smart Watch</h3>
+                        <p class="product-description">1.4" AMOLED display, heart rate monitor, fitness tracking, 7-day battery</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="rating-text">4.0 (92 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R800</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add X-Tech Smart Watch to cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="wishlist-toggle" aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Washing Machine -->
+                <article class="product-card" data-category="appliances" data-price="4000" tabindex="0">
+                    <div class="product-image">
+                        <img src="images/washing-machine-5089939_640.jpg" alt="High efficiency washing machine" loading="lazy">
+                        <span class="product-badge">ENERGY SAVER</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>X-Tech Washing Machine</h3>
+                        <p class="product-description">7kg capacity, 15 programs, inverter motor, A+++ energy rating</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="rating-text">4.5 (67 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R4,000</span>
+                            <span class="original-price">R4,799</span>
+                            <span class="discount">17% OFF</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add X-Tech Washing Machine to cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="wishlist-toggle" aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Smart TV -->
+                <article class="product-card" data-category="appliances" data-price="3500" tabindex="0">
+                    <div class="product-image">
+                        <img src="images/tv-627876_640.jpg" alt="4K Smart TV with built-in streaming apps" loading="lazy">
+                        <span class="product-badge">SMART TV</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>X-Tech 4K Smart TV</h3>
+                        <p class="product-description">43" 4K UHD display, HDR10, smart platform with built-in apps</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="rating-text">4.0 (143 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R3,500</span>
+                            <span class="original-price">R4,299</span>
+                            <span class="discount">19% OFF</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add X-Tech 4K Smart TV to cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="wishlist-toggle" aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Microwave -->
+                <article class="product-card" data-category="appliances" data-price="1200" tabindex="0">
+                    <div class="product-image">
+                        <img src="images/appliance-5144884_640.jpg" alt="High-quality microwave with multiple settings" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>X-Tech Microwave Oven</h3>
+                        <p class="product-description">25L capacity, 10 power levels, 15 auto-cook programs, child lock</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="rating-text">4.9 (201 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R1,200</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add X-Tech Microwave Oven to cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="wishlist-toggle" aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="section-header">
+                <h2 id="accessoriesHeading">Accessories</h2>
+            </div>
+
+            <div class="products-grid">
+                <!-- Phone Cases -->
+                <article class="product-card" data-category="accessories" data-price="150" tabindex="0">
+                    <div class="product-image">
+                        <img src="images/casings-5671111_640.jpg" alt="Premium phone cases in various colors" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>X-Tech Phone Cases</h3>
+                        <p class="product-description">Premium protective cases for various smartphone models</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="rating-text">4.7 (312 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R150</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add X-Tech Phone Cases to cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="wishlist-toggle" aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Gaming Console -->
+                <article class="product-card" data-category="accessories" data-price="400" tabindex="0">
+                    <div class="product-image">
+                        <img src="images/psp-2202617_640.jpg" alt="Portable gaming console with games" loading="lazy">
+                        <span class="product-badge">GAMING</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>X-Tech Portable Console</h3>
+                        <p class="product-description">Handheld gaming console with 100+ built-in games</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="rating-text">4.0 (89 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R400</span>
+                            <span class="original-price">R599</span>
+                            <span class="discount">33% OFF</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add X-Tech Portable Console to cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="wishlist-toggle" aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Power Adaptor -->
+                <article class="product-card" data-category="accessories" data-price="80" tabindex="0">
+                    <div class="product-image">
+                        <img src="images/two-pin-3509490_640.jpg" alt="Two-pin power adaptor for travel" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>X-Tech Travel Adaptor</h3>
+                        <p class="product-description">Universal two-pin power adaptor for international travel</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="rating-text">4.9 (156 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R80</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add X-Tech Travel Adaptor to cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="wishlist-toggle" aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Video Game Console -->
+                <article class="product-card" data-category="accessories" data-price="800" tabindex="0">
+                    <div class="product-image">
+                        <img src="images/video-game-console-2202592_640.jpg" alt="Modern video game console with controller" loading="lazy">
+                        <span class="product-badge">GAMING</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>X-Tech Game Console</h3>
+                        <p class="product-description">Home gaming console with 4K HDR support, includes controller</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="rating-text">4.6 (178 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">R800</span>
+                            <span class="original-price">R999</span>
+                            <span class="discount">20% OFF</span>
+                        </div>
+                        <button class="add-to-cart" aria-label="Add X-Tech Game Console to cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="wishlist-toggle" aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="ctaHeading">
+            <div class="cta-content">
+                <h2 id="ctaHeading">Need Help Choosing the Right Product?</h2>
+                <p>Our tech experts are ready to help you find the perfect electronics for your needs.</p>
+                <div class="cta-buttons">
+                    <a href="contactus.html" class="cta-button primary">Contact Our Experts</a>
+                    <a href="enquiry.html" class="cta-button secondary">Ask a Question</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <address>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Johannesburg, SA</p>
+                    <p><i class="fas fa-phone"></i> +27 11 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@xilombe.co.za</p>
+                </address>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Xilombe Electronics. All Rights Reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Product Quick View Modal -->
+    <div id="quickViewModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="quickViewTitle" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalProductImage" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h2 id="quickViewTitle"></h2>
+                    <div class="modal-rating">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="rating-text">4.0 (124 reviews)</span>
+                        </div>
+                    </div>
+                    <div class="modal-price">
+                        <span class="current-price"></span>
+                        <span class="original-price"></span>
+                        <span class="discount"></span>
+                    </div>
+                    <div class="modal-description"></div>
+                    <div class="modal-specs">
+                        <h3>Specifications</h3>
+                        <ul id="modalSpecsList">
+                            <!-- Will be populated by JavaScript -->
+                        </ul>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="add-to-cart" aria-label="Add to cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                        <button class="wishlist-toggle" aria-label="Add to wishlist">
+                            <i class="far fa-heart"></i> Add to Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="item">
-        <img src="images/smart-watch-889639_640.jpg" width="300" height="400" alt="Smart Watch">
-        <div class="description">Stylish smart watch</div>
-        <div class="price">R800</div>
-    </div>
-    <div class="item">
-        <img src="images/apple-3780515_640.jpg" width="300" height="400" alt="Apple Electronics">
-        <div class="description">Apple electronics</div>
-        <div class="price">R300</div>
-    </div>
-    <div class="item">
-        <img src="images/washing-machine-5089939_640.jpg" width="300" height="400" alt="washing machine">
-        <div class="description">High quality washing machine</div>
-        <div class="price">R4000</div>
-    </div>
-    <div class="item">
-        <img src="images/tv-627876_640.jpg" width="300" height="400" alt="TV">
-        <div class="description">4k Smart TV with built-in apps</div>
-        <div class="price">R3500</div>
-    </div>
-    <div class="item">
-        <img src="images/appliance-5144884_640.jpg" width="300" height="400" alt="Microwave">
-        <div class="description">High-quality microwave</div>
-        <div class="price">R1200</div>
-    </div>
-        <h2>Accessories</h2>
-        <br>
-       <div class="item">
-        <img src="images/casings-5671111_640.jpg" width="300" height="400" alt="Phone cases">
-        <div class="description">High-quality phone cases</div>
-        <div class="price">R150</div>
-       </div>
-       <div class="item">
-        <img src="images/psp-2202617_640.jpg" width="300" height="400" alt="Gaming console">
-        <div class="description">PSP gaming console</div>
-        <div class="price">R400</div>
-       </div>
-       <div class="item">
-        <img src="images/two-pin-3509490_640.jpg" width="300" height="400" alt="Power adaptor">
-        <div class="description">Two-pin power adaptor</div>
-        <div class="price">R80</div>
-       </div>
-       <div class="item">
-        <img src="images/video-game-console-2202592_640.jpg" width="300" height="400" alt="Video game console">
-        <div class="description">Modern video game console</div>
-        <div class="price">R800</div>
-        </body>
+
+  
+    <script src="javascript/script.js" defer></script>
+</body>
 </html>
-    

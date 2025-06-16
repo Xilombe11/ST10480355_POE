@@ -1,177 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Xilombe Electronics</title>
-            <link rel="stylesheet" href="css/themes.css"/>
-            <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Xilombe Electronics | Quality Tech Solutions</title>
+    <meta name="description" content="Learn about Xilombe Electronics - our mission, vision, team, and achievements. We're your trusted source for quality electronics in South Africa.">
+    <meta name="keywords" content="electronics, tech, South Africa, computers, laptops, smartphones, Xilombe, about us">
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header id="mainHeader">
+        <div class="logo-container">
+            <img src="images/Logo.jpg" alt="Xilombe Electronics Logo - Your Trusted Tech Partner" width="200" height="60">
+        </div>
+        <nav aria-label="Main navigation">
+            <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="primaryNav">
+                <span class="hamburger"></span>
+                <span class="sr-only">Menu</span>
+            </button>
+            <ul id="primaryNav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html" aria-current="page">About Us</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+            </ul>
+        </nav>
+    </header>
 
-              .customer-name {display: block;text-align: center;margin-top: 10px;font-style: italic;}
-    
+    <main>
+        <section class="hero-section" aria-labelledby="aboutHeroHeading">
+            <div class="hero-content">
+                <h1 id="aboutHeroHeading">About Xilombe Electronics</h1>
+                <p class="hero-subtitle">Connecting you with quality technology since 2003</p>
+            </div>
+        </section>
 
-        .content p {
-            font-size: 1.1em;line-height: 1.6; text-align: center;
-           
-        }
+        <section class="mission-section" aria-labelledby="missionHeading">
+            <h2 id="missionHeading">Our Mission & Vision</h2>
+            <div class="mission-cards">
+                <div class="mission-card" tabindex="0">
+                    <i class="fas fa-bullseye mission-icon"></i>
+                    <h3>Mission Statement</h3>
+                    <p>At Xilombe Electronics, our mission is to provide high-quality electronics at affordable prices and to create a welcoming shopping experience that encourages our customers to stay connected, which will bring people together.</p>
+                </div>
+                <div class="mission-card" tabindex="0">
+                    <i class="fas fa-eye vision-icon"></i>
+                    <h3>Vision Statement</h3>
+                    <p>Our vision is to be the trusted electronics retailer in our community, so that our customers can trust us with their tech needs. We aim to be recognized for our future excellence, customer satisfaction, and ability to continuously adapt to the evolving tech space.</p>
+                </div>
+            </div>
+        </section>
 
-        section {padding: 40px 20px;max-width: 1000px;margin: auto;}
-
-        section h2 {color: rgb(34, 34, 34);text-align: center;margin-bottom: 20px;}
-
-        .testimonials-section {background-color: rgb(244, 244, 244);padding: 30px 20px;border-radius: 10px;margin: 40px 0;}
-
-        .testimonials {background-color: white;padding: 20px;margin: 15px auto;max-width: 700px;border-left: 5px solid;color: rgb(4, 126, 247);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);}
-
-        .team-section ul {display: grid;grid-template-columns: repeat(auto-fit, minmax(250px,1fr));gap: 30px;padding: 20px;}
-
-        .team-section li {background-color: rgb(249, 249, 249);border-radius: 10px;padding: 15px;box-shadow: 0 2px 5px rgba(0,0, 0, 0.05);}
-
-        .team-section h4 {margin-bottom: 5px;color:rgb(16, 177, 16)}
-
-        h1, h2, h3, h4 {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color: rgb(44, 44, 44)}
-
-        p {font-family: 'Arial', sans-serif;color: rgb(68,68, 68);line-height: 1.6;}
-
-        h1, h2, h3 {margin-top: 40px;}
-
-        hr {margin: 20px auto;width: 80%;}
-
-        @media (max-width: 600px)
-        {.testimonial,.team-section ul{padding: 10px;} .team-section ul {grid-template-columns: 1fr;}}
-        * {
-            box-sizing: border-box; margin: 0;padding: 0;
-           
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-       
-            </style>
-        </head>
-        <body>
-            <header>
-              <img src="images/Logo.jpg" alt="Xilombe Electronics Logo" />
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutus.html">About Us</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contactus.html">Contact Us</a></li>
-                        <li><a href="enquiry.html">Enquiry</a></li>
-                    </ul>
-                </nav>
-            </header>
-    
-            <h1 >About us</h1>
-           
-            <h2>Mission and Vision Statements</h2>
-            
-            <h4>Mission Statement:</h4>
-            <p>
-              At Xilombe Electronics, our mission is to provide high-quality electronics at affordable prices 
-              and to create a welcoming shopping experience that encourages our customers to stay connected, 
-              which will bring people together.
-            </p>
-            
-            <h4>Vision Statement:</h4>
-            <p>
-              Our vision is to be the trusted electronics retailer in our community, so that our customers can 
-              trust us with their tech needs. We aim to be recognized for our future excellence, customer 
-              satisfaction, and ability to continuously adapt to the evolving tech space.
-            </p>
-            
-           
-            
-              <div class="testimonials-section">
-                <h2>What our customers say</h2>
-              
-                <div class="testimonial">
-                  <p>
-                    I recently bought a laptop from Xilombe Electronics and I'm blown away
-                    by the excellent customer service and competitive prices!  </p>
-                  <span class="customer-name">- John D, Happy Customer</span>
+        <section class="testimonials-section" aria-labelledby="testimonialsHeading">
+            <h2 id="testimonialsHeading">Customer Testimonials</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <blockquote>
+                        <p>I recently bought a laptop from Xilombe Electronics and I'm blown away by the excellent customer service and competitive prices!</p>
+                        <footer>- John D, Happy Customer</footer>
+                    </blockquote>
                 </div>
                 <div class="testimonial">
-                  <p>
-                    Xilombe Electronics has become my go-to store for all my
-                    electronic needs. Their knowledgeable staff and wide range of products make them unbeatable! </p>
-                  <span class="customer-name">- Sarah K, Satisfied Customer</span>
+                    <blockquote>
+                        <p>Xilombe Electronics has become my go-to store for all my electronic needs. Their knowledgeable staff and wide range of products make them unbeatable!</p>
+                        <footer>- Sarah K, Satisfied Customer</footer>
+                    </blockquote>
                 </div>
-              </div>
-              
-              
-            
-<h2 >Awards and recognition</h2>
-<hr>
-<h3 >2022</h3>
+                <div class="testimonial">
+                    <blockquote>
+                        <p>The after-sales support at Xilombe is exceptional. When I had an issue with my purchase, they resolved it immediately with no hassle.</p>
+                        <footer>- Michael T, Loyal Customer</footer>
+                    </blockquote>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-prev" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots"></div>
+                    <button class="slider-next" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
 
-  <h2>Awards and Recognition</h2>
-  <hr>
-  <h3>2022</h3>
-  <ul style="list-style: none; padding: 0;">
-    <li style="text-align: center;">
-      <b>Best Electronics Retailer Award</b><br>
-      <span>- Received from the Local Business Association</span>
-    </li>
-    <li style="text-align: center; margin-top: 10px;">
-      <b>Customer Service Excellence Award</b><br>
-      <span>- Received from the National Retail Federation</span>
-    </li>
-  </ul>
-  
-  <h2>Meet Our Team</h2>
-  <hr>
-  
-  <div class="team-section">
-    <h3>Management Team</h3>
-    <ul style="list-style: none; padding: 0;">
-      <li>
-        <h4>Xilombe Bvuma</h4>
-        <p>Founder and CEO</p>
-        <p>Email: <a href="mailto:xilombe.bvuma@xilombe.co.za" >xilombe.bvuma@xilombe.co.za</a></p>
-      </li>
-      <li>
-        <h4>John Doe</h4>
-        <p>Operations Manager</p>
-        <p>Email: <a href="mailto:john.doe@xilombe.co.za">john.doe@xilombe.co.za</a></p>
-      </li>
-    </ul>
-  
-    <h3>Sales Team</h3>
-    <ul style="list-style: none; padding: 0;">
-      <li>
-        <h4>Jane Smith</h4>
-        <p>Sales Representative</p>
-        <p>Email: <a href="mailto:jane.smith@xilombe.co.za">jane.smith@xilombe.co.za</a></p>
-      </li>
-      <li>
-        <h4>Bob Johnson</h4>
-        <p>Sales Representative</p>
-        <p>Email: <a href="mailto:bob.johnson@xilombe.co.za">bob.johnson@xilombe.co.za</a></p>
-      </li>
-    </ul>
-  
-    <h3>Technical Team</h3>
-    <ul style="list-style: none; padding: 0;">
-      <li>
-        <h4>Mary Lee</h4>
-        <p>Technical Support Specialist</p>
-        <p>Email: <a href="mailto:mary.lee@xilombe.co.za">mary.lee@xilombe.co.za</a></p>
-      </li>
-      <li>
-        <h4>David Kim</h4>
-        <p>Technical Support Specialist</p>
-        <p>Email: <a href="mailto:david.kim@xilombe.co.za">david.kim@xilombe.co.za</a></p>
-      </li>
-    </ul>
-  </div>
-  
- 
+        <section class="awards-section" aria-labelledby="awardsHeading">
+            <h2 id="awardsHeading">Awards & Recognition</h2>
+            <div class="awards-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <h3>Tech Retailer of the Year</h3>
+                        <p>Awarded by South African Tech Association for outstanding service and product range.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-content">
+                        <h3>Best Electronics Retailer Award</h3>
+                        <p>Received from the Local Business Association for excellence in customer service.</p>
+                        <h3>Customer Service Excellence Award</h3>
+                        <p>Received from the National Retail Federation for outstanding customer support.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2021</div>
+                    <div class="timeline-content">
+                        <h3>Emerging Business of the Year</h3>
+                        <p>Recognized by the Chamber of Commerce for rapid growth and community impact.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section" aria-labelledby="teamHeading">
+            <h2 id="teamHeading">Meet Our Team</h2>
+            <div class="team-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="management">Management</button>
+                    <button class="tab-button" data-tab="sales">Sales</button>
+                    <button class="tab-button" data-tab="technical">Technical</button>
+                </div>
+                
+                <div class="tab-content active" id="management">
+                    <div class="team-grid">
+                        <div class="team-member" tabindex="0">
+                            <div class="member-image">
+                                <img src="images/team/ceo.jpg" alt="Xilombe Bvuma, Founder and CEO" width="200" height="200" loading="lazy">
+                            </div>
+                            <div class="member-info">
+                                <h3>Xilombe Bvuma</h3>
+                                <p class="position">Founder & CEO</p>
+                                <div class="contact-info">
+                                    <button class="email-toggle" aria-expanded="false" aria-controls="email-ceo">
+                                        <i class="fas fa-envelope"></i> Show Email
+                                    </button>
+                                    <span id="email-ceo" hidden>xilombe.bvuma@xilombe.co.za</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-member" tabindex="0">
+                            <div class="member-image">
+                                <img src="images/team/operations.jpg" alt="John Doe, Operations Manager" width="200" height="200" loading="lazy">
+                            </div>
+                            <div class="member-info">
+                                <h3>John Doe</h3>
+                                <p class="position">Operations Manager</p>
+                                <div class="contact-info">
+                                    <button class="email-toggle" aria-expanded="false" aria-controls="email-ops">
+                                        <i class="fas fa-envelope"></i> Show Email
+                                    </button>
+                                    <span id="email-ops" hidden>john.doe@xilombe.co.za</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="sales">
+                    <div class="team-grid">
+                        <div class="team-member" tabindex="0">
+                            <div class="member-image">
+                                <img src="images/team/sales1.jpg" alt="Jane Smith, Sales Representative" width="200" height="200" loading="lazy">
+                            </div>
+                            <div class="member-info">
+                                <h3>Jane Smith</h3>
+                                <p class="position">Sales Representative</p>
+                                <div class="contact-info">
+                                    <button class="email-toggle" aria-expanded="false" aria-controls="email-sales1">
+                                        <i class="fas fa-envelope"></i> Show Email
+                                    </button>
+                                    <span id="email-sales1" hidden>jane.smith@xilombe.co.za</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-member" tabindex="0">
+                            <div class="member-image">
+                                <img src="images/team/sales2.jpg" alt="Bob Johnson, Sales Representative" width="200" height="200" loading="lazy">
+                            </div>
+                            <div class="member-info">
+                                <h3>Bob Johnson</h3>
+                                <p class="position">Sales Representative</p>
+                                <div class="contact-info">
+                                    <button class="email-toggle" aria-expanded="false" aria-controls="email-sales2">
+                                        <i class="fas fa-envelope"></i> Show Email
+                                    </button>
+                                    <span id="email-sales2" hidden>bob.johnson@xilombe.co.za</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="technical">
+                    <div class="team-grid">
+                        <div class="team-member" tabindex="0">
+                            <div class="member-image">
+                                <img src="images/team/tech1.jpg" alt="Mary Lee, Technical Support Specialist" width="200" height="200" loading="lazy">
+                            </div>
+                            <div class="member-info">
+                                <h3>Mary Lee</h3>
+                                <p class="position">Technical Support Specialist</p>
+                                <div class="contact-info">
+                                    <button class="email-toggle" aria-expanded="false" aria-controls="email-tech1">
+                                        <i class="fas fa-envelope"></i> Show Email
+                                    </button>
+                                    <span id="email-tech1" hidden>mary.lee@xilombe.co.za</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="team-member" tabindex="0">
+                            <div class="member-image">
+                                <img src="images/team/tech2.jpg" alt="David Kim, Technical Support Specialist" width="200" height="200" loading="lazy">
+                            </div>
+                            <div class="member-info">
+                                <h3>David Kim</h3>
+                                <p class="position">Technical Support Specialist</p>
+                                <div class="contact-info">
+                                    <button class="email-toggle" aria-expanded="false" aria-controls="email-tech2">
+                                        <i class="fas fa-envelope"></i> Show Email
+                                    </button>
+                                    <span id="email-tech2" hidden>david.kim@xilombe.co.za</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section" aria-labelledby="ctaHeading">
+            <div class="cta-content">
+                <h2 id="ctaHeading">Ready to Experience the Xilombe Difference?</h2>
+                <div class="cta-buttons">
+                    <a href="products.html" class="cta-button primary">Browse Products</a>
+                    <a href="contactus.html" class="cta-button secondary">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <address>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Johannesburg, SA</p>
+                    <p><i class="fas fa-phone"></i> +27 11 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@xilombe.co.za</p>
+                </address>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Xilombe Electronics. All Rights Reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+        </div>
+    </footer>
+
+   
+    <script src="javascript/script.js" defer></script>
 </body>
 </html>
