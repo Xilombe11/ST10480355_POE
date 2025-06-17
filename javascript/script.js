@@ -583,3 +583,389 @@ document.addEventListener('DOMContentLoaded', function() {
         lazyImages.forEach(img => imageObserver.observe(img));
     }
 });
+// products.js - Comprehensive JavaScript for Xilombe Electronics Products Page
+
+document.addEventListener('DOMContentLoaded', function() {
+    // =============================================
+    // Mobile Menu Functionality (Shared with all pages)
+    // =============================================
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const primaryNav = document.getElementById('primaryNav');
+    
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            primaryNav.classList.toggle('visible');
+            this.querySelector('.hamburger').classList.toggle('active');
+        });
+    }
+
+    // =============================================
+    // Product Filtering and Sorting Functionality
+    // =============================================
+    const categoryFilter = document.getElementById('categoryFilter');
+    const priceFilter = document.getElementById('priceFilter');
+    const productCards = document.querySelectorAll('.product-card');
+
+    function filterAndSortProducts() {
+        const selectedCategory = categoryFilter.value;
+        const sortOption = priceFilter.value;
+        
+        // Filter products by category
+        productCards.forEach(card => {
+            const cardCategory = card.dataset.category;
+            
+            if (selectedCategory === 'all' || cardCategory === selectedCategory) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // Sort products by price
+        const visibleProducts = Array.from(productCards).filter(card => 
+            card.style.display !== 'none'
+        );
+
+        visibleProducts.sort((a, b) => {
+            const priceA = parseFloat(a.dataset.price);
+            const priceB = parseFloat(b.dataset.price);
+            
+            if (sortOption === 'low-high') {
+                return priceA - priceB;
+            } else if (sortOption === 'high-low') {
+                return priceB - priceA;
+            }
+            return 0; // Default order
+        });
+
+        // Reorder products in DOM
+        const productsGrid = document.querySelector('.products-grid');
+        visibleProducts.forEach(product => {
+            productsGrid.appendChild(product);
+        });
+    }
+
+    if (categoryFilter && priceFilter) {
+        categoryFilter.addEventListener('change', filterAndSortProducts);
+        priceFilter.addEventListener('change', filterAndSortProducts);
+    }
+
+    // =============================================
+    // Quick View Modal Functionality
+    // =============================================
+    const quickViewButtons = document.querySelectorAll('.quick-view');
+    const quickViewModal = document.getElementById('quickViewModal');
+    const modalClose = document.querySelector('.modal-close');
+
+    function openQuickView(productCard) {
+        const productImage = productCard.querySelector('img').src;
+        const productName = productCard.querySelector('h3').textContent;
+        const productDescription = productCard.querySelector('.product-description').textContent;
+        const currentPrice = productCard.querySelector('.current-price').textContent;
+        const originalPrice = productCard.querySelector('.original-price')?.textContent || '';
+        const discount = productCard.querySelector('.discount')?.textContent || '';
+        
+        // Set modal content
+        document.getElementById('modalProductImage').src = productImage;
+        document.getElementById('modalProductImage').alt = productName;
+        document.getElementById('quickViewTitle').textContent = productName;
+        document.querySelector('.modal-description').textContent = productDescription;
+        document.querySelector('.modal-price .current-price').textContent = currentPrice;
+        
+        if (originalPrice) {
+            document.querySelector('.modal-price .original-price').textContent = originalPrice;
+            document.querySelector('.modal-price .original-price').style.display = 'inline';
+        } else {
+            document.querySelector('.modal-price .original-price').style.display = 'none';
+        }
+        
+        if (discount) {
+            document.querySelector('.modal-price .discount').textContent = discount;
+            document.querySelector('.modal-price .discount').style.display = 'inline';
+        } else {
+            document.querySelector('.modal-price .discount').style.display = 'none';
+        }
+        
+        // Show modal
+        quickViewModal.style.display = 'block';
+        quickViewModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        
+        // Focus on close button for accessibility
+        setTimeout(() => {
+            modalClose.focus();
+        }, 100);
+    }
+
+    quickViewButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const productCard = this.closest('.product-card');
+            openQuickView(productCard);
+        });
+    });
+
+    if (modalClose) {
+        modalClose.addEventListener('click', function() {
+            quickViewModal.style.display = 'none';
+            quickViewModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    // Close modal when clicking outside content
+    quickViewModal.addEventListener('click', function(e) {
+        if (e.target === this) {
+            this.style.display = 'none';
+            this.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && quickViewModal.style.display === 'block') {
+            quickViewModal.style.display = 'none';
+            quickViewModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // =============================================
+    // Wishlist Functionality
+    // =============================================
+    const wishlistButtons = document.querySelectorAll('.wishlist-toggle');
+    
+    wishlistButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const icon = this.querySelector('i');
+            const productCard = this.closest('.product-card');
+            const productName = productCard.querySelector('h3').textContent;
+            
+            if (icon.classList.contains('far')) {
+                // Add to wishlist
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+                showNotification(`${productName} added to wishlist`);
+                
+                // Store in localStorage
+                const productId = productCard.dataset.id || productName.toLowerCase().replace(/\s+/g, '-');
+                let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+                
+                if (!wishlist.includes(productId)) {
+                    wishlist.push(productId);
+                    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+                }
+            } else {
+                // Remove from wishlist
+                icon.classList.remove('fas');
+                icon.classList.add('far');
+                showNotification(`${productName} removed from wishlist`);
+                
+                // Remove from localStorage
+                const productId = productCard.dataset.id || productName.toLowerCase().replace(/\s+/g, '-');
+                let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+                wishlist = wishlist.filter(item => item !== productId);
+                localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            }
+        });
+    });
+
+    // Initialize wishlist buttons
+    function initializeWishlist() {
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        
+        wishlistButtons.forEach(button => {
+            const productCard = button.closest('.product-card');
+            const productName = productCard.querySelector('h3').textContent;
+            const productId = productCard.dataset.id || productName.toLowerCase().replace(/\s+/g, '-');
+            
+            if (wishlist.includes(productId)) {
+                const icon = button.querySelector('i');
+                icon.classList.remove('far');
+                icon.classList.add('fas');
+            }
+        });
+    }
+    
+    initializeWishlist();
+
+    // =============================================
+    // Add to Cart Functionality
+    // =============================================
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const productCard = this.closest('.product-card');
+            const productName = productCard.querySelector('h3').textContent;
+            const productPrice = productCard.querySelector('.current-price').textContent;
+            const productImage = productCard.querySelector('img').src;
+            
+            // Create cart item object
+            const cartItem = {
+                name: productName,
+                price: productPrice,
+                image: productImage,
+                quantity: 1
+            };
+            
+            // Get existing cart or create new one
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Check if item already in cart
+            const existingItem = cart.find(item => item.name === productName);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push(cartItem);
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            // Show notification
+            showNotification(`${productName} added to cart`);
+            
+            // Update cart count in header (if exists)
+            updateCartCount();
+        });
+    });
+
+    // Update cart count in header
+    function updateCartCount() {
+        const cartCount = document.querySelector('.cart-count');
+        if (cartCount) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            cartCount.textContent = totalItems;
+            cartCount.style.display = totalItems > 0 ? 'inline-block' : 'none';
+        }
+    }
+    
+    // Initialize cart count
+    updateCartCount();
+
+    // =============================================
+    // Notification System
+    // =============================================
+    function showNotification(message) {
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.textContent = message;
+        notification.style.position = 'fixed';
+        notification.style.bottom = '20px';
+        notification.style.right = '20px';
+        notification.style.backgroundColor = '#4CAF50';
+        notification.style.color = 'white';
+        notification.style.padding = '15px 25px';
+        notification.style.borderRadius = '5px';
+        notification.style.boxShadow = '0 4px 8px rgba(0,0,0,0.2)';
+        notification.style.zIndex = '1000';
+        notification.style.transition = 'opacity 0.5s';
+        notification.style.opacity = '0';
+        
+        document.body.appendChild(notification);
+        
+        // Fade in
+        setTimeout(() => {
+            notification.style.opacity = '1';
+        }, 10);
+        
+        // Fade out and remove after 3 seconds
+        setTimeout(() => {
+            notification.style.opacity = '0';
+            setTimeout(() => {
+                notification.remove();
+            }, 500);
+        }, 3000);
+    }
+
+    // =============================================
+    // Accessibility Improvements
+    // =============================================
+    // Add keyboard navigation class when tab is used
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab') {
+            document.documentElement.classList.add('keyboard-nav');
+        }
+    });
+    
+    document.addEventListener('mousedown', function() {
+        document.documentElement.classList.remove('keyboard-nav');
+    });
+
+    // Make product cards keyboard accessible
+    productCards.forEach(card => {
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                const quickViewBtn = this.querySelector('.quick-view');
+                if (quickViewBtn) quickViewBtn.click();
+            }
+        });
+    });
+
+    // =============================================
+    // Lazy Loading for Images
+    // =============================================
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src || img.src;
+                    img.removeAttribute('loading');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+        
+        lazyImages.forEach(img => {
+            imageObserver.observe(img);
+        });
+    } else {
+        // Fallback for browsers without IntersectionObserver
+        lazyImages.forEach(img => {
+            img.src = img.dataset.src || img.src;
+        });
+    }
+
+    // =============================================
+    // Skip Link Functionality (Accessibility)
+    // =============================================
+    const skipLink = document.querySelector('.skip-link');
+    if (skipLink) {
+        skipLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.setAttribute('tabindex', '-1');
+                target.focus();
+                target.addEventListener('blur', function() {
+                    this.removeAttribute('tabindex');
+                }, { once: true });
+            }
+        });
+    }
+});
+
+// Debounce function for performance optimization
+function debounce(func, wait = 20, immediate = true) {
+    let timeout;
+    return function() {
+        const context = this, args = arguments;
+        const later = function() {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+}

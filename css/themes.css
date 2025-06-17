@@ -1,150 +1,69 @@
 /* ===== Base Styles ===== */
 :root {
-    --primary-color: #047ef7;
-    --secondary-color: #10b110;
-    --dark-color: #2c2c2c;
-    --light-color: #f8f9fa;
-    --accent-color: #ff6b6b;
-    --text-color: #444;
-    --text-light: #6c757d;
-    --white: #ffffff;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
-}
+    --primary-color: #047ef7; --secondary-color: #10b110; --dark-color: #2c2c2c;
+    --light-color: #f8f9fa;  --accent-color: #ff6b6b; --text-color: #444; --text-light: #6c757d;
+ --white: #ffffff; --shadow: 0 4px 6px rgba(0, 0, 0, 0.1); --transition: all 0.3s ease;}
 
 /* ===== Reset & Base Styles ===== */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box;  margin: 0; padding: 0;}
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
+html { scroll-behavior: smooth;}
+   
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text-color);
     background-color: var(--white);
-    overflow-x: hidden;
-}
+    overflow-x: hidden;}
 
-h1, h2, h3, h4, h5, h6 {
-    color: var(--dark-color);
-    margin-bottom: 1rem;
-    line-height: 1.2;
-}
 
-p {
-    margin-bottom: 1rem;
-}
+h1, h2, h3, h4, h5, h6 { color: var(--dark-color); margin-bottom: 1rem;line-height: 1.2;}
+   
+p { margin-bottom: 1rem;}
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
+a { text-decoration: none; color: inherit;}
+   
+img { max-width: 100%; height: auto; display: block;}
+   
+ul {  list-style: none;}
+  
+button { cursor: pointer; border: none;background: none;font-family: inherit;}
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-ul {
-    list-style: none;
-}
-
-button {
-    cursor: pointer;
-    border: none;
-    background: none;
-    font-family: inherit;
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0;margin: -1px;overflow: hidden; clip: rect(0, 0, 0, 0);
+    white-space: nowrap; border: 0;}
+   
 /* ===== Header Styles ===== */
-header {
-    background-color: var(--dark-color);
-    padding: 1rem 2rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+header { background-color: var(--dark-color);padding: 1rem 2rem; position: fixed; width: 100%; top: 0; z-index: 1000;
     box-shadow: var(--shadow);
-    transition: var(--transition);
-}
+    transition: var(--transition);}
 
-.logo-container img {
-    height: 60px;
-    width: auto;
-}
-
+.logo-container img { height: 60px;width: auto;}
+   
 nav ul {
-    display: flex;
-    gap: 1.5rem;
-}
-
+    display: flex; gap: 1.5rem;}
+   
 nav a {
-    color: var(--white);
-    font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: var(--transition);
-    position: relative;
-}
+    color: var(--white); font-weight: 600; padding: 0.5rem 1rem;border-radius: 4px;transition: var(--transition);position: relative;}
+   
 
 nav a:hover,
-nav a:focus {
-    color: var(--white);
-    background-color: var(--primary-color);
-}
-
-nav a[aria-current="page"] {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
+nav a:focus {color: var(--white); background-color: var(--primary-color);}
+    
+nav a[aria-current="page"] { background-color: var(--primary-color); color: var(--white);}
 
 /* Mobile menu toggle */
 .mobile-menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 1.5rem;
-    padding: 0.5rem;
+    display: none;  background: none; border: none;color: var(--white);font-size: 1.5rem;padding: 0.5rem;
 }
 
 .hamburger {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--white);
-    position: relative;
+    display: block;    width: 25px;height: 3px; background-color: var(--white); position: relative;
+   
     transition: var(--transition);
 }
 
 .hamburger::before,
 .hamburger::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: inherit;
-    left: 0;
-    transition: var(--transition);
+    content: ''; position: absolute; width: 100%;height: 100%;
+ 
+    background-color: inherit; left: 0; transition: var(--transition);
 }
 
 .hamburger::before {
@@ -158,14 +77,9 @@ nav a[aria-current="page"] {
 /* ===== Hero Section ===== */
 .hero-section {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/about-hero.jpg') center/cover no-repeat;
-    height: 60vh;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--white);
-    margin-top: 80px;
+    height: 60vh;  min-height: 400px;display: flex;  align-items: center;justify-content: center;
+
+    text-align: center; color: var(--white); margin-top: 80px;
 }
 
 .hero-content {
@@ -181,41 +95,32 @@ nav a[aria-current="page"] {
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.5rem; margin-bottom: 2rem;
     color: var(--white);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);}
+   
 /* ===== Mission Section ===== */
 .mission-section {
     padding: 4rem 2rem;
-    text-align: center;
-}
+    text-align: center;}
+
 
 .mission-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    position: relative;
+    font-size: 2.5rem;  margin-bottom: 3rem;  position: relative;
 }
 
 .mission-section h2::after {
-    content: '';
-    display: block;
-    width: 80px;
+    content: '';  display: block;  width: 80px;
     height: 4px;
     background-color: var(--primary-color);
     margin: 1rem auto;
 }
 
 .mission-cards {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    display: flex; justify-content: center;
+    gap: 2rem; flex-wrap: wrap;
+    max-width: 1200px;margin: 0 auto; } 
+
 
 .mission-card {
     flex: 1;
